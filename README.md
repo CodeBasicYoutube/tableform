@@ -85,6 +85,6 @@ Welcome to TableForm
 > - 隨意你使用，只要喜歡請將它帶走並使用在任何產品物件上。
 
 ----
-  [0]: https://github.com/Crackccc/tableform_dist/archive/master.zip "TableForm"
+  [0]: https://github.com/Crackccc/tableform/archive/master.zip "TableForm"
   [1]: http://sass-lang.com/ "Sass"
   [2]: http://compass-style.org/ "Compass"
