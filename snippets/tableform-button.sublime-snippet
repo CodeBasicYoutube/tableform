@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<button type="cancel">取消</button>
+<button type="submit">送出</button>
+]]></content>
+	<tabTrigger>buttontbf</tabTrigger>
+	<description>tbf-button TableForm button</description>
+	<scope>text.html, source.php, source.asp</scope>
+</snippet>

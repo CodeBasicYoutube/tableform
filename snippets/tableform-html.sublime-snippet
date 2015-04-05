@@ -1,0 +1,77 @@
+<snippet>
+	<content><![CDATA[
+<!-- 表單開始 -->
+
+<table class="tbf-table">
+    <caption>基本聯絡表單 :</caption>
+    <tbody>
+        <!-- 姓名 -->
+        <tr>
+            <th width="45"><label for="name1">姓名 :</label></th>
+            <td width="500"><input type="text" name="name1" id="name1" placeholder="請輸入您的姓名"></td>
+        </tr>
+        <!-- 電話 -->
+        <tr>
+            <th><label for="tel1">電話 :</label></th>
+            <td><input type="text" name="tel1" id="tel1" placeholder="請輸入您的電話"></td>
+        </tr>
+        <!-- 性別 -->
+        <tr>
+            <th><label for="sex1">性別 :</label></th>
+            <td>
+                <input type="radio" name="sex" id="sex1" checked>
+                <label for="sex1"><span></span>男</label>
+                <input type="radio" name="sex" id="sex2">
+                <label for="sex2"><span></span>女</label>
+            </td>
+        </tr>
+        <!-- 生日 -->
+        <tr>
+            <th><label for="birthday1_y">生日 :</label></th>
+            <td>
+                <select name="birthday1_y" id="birthday1_y">
+                    <option value="">請選擇年份</option>
+                    <option value="">2015</option>
+                    <option value="">2014</option>
+                </select>&nbsp;年&nbsp;
+                <select name="birthday1_m" id="birthday1_m">
+                    <option value="">請選擇月份</option>
+                </select>&nbsp;月&nbsp;
+                <select name="birthday1_d" id="birthday1_d">
+                    <option value="">請選擇日期</option>
+                </select>&nbsp;日&nbsp;
+            </td>
+        </tr>
+        <!-- 地址 -->
+         <tr>
+            <th><label for="addr1">地址 :</label></th>
+            <td>
+                <input type="text" name="addr1" id="addr1" placeholder="請輸入您的地址">
+            </td>
+        </tr>
+        <!-- 留言 -->
+        <tr>
+            <th><label for="memo1">內容 :</label></th>
+            <td>
+                <textarea name="memo1" id="memo1"></textarea>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                <div align="right">
+                    <button type="cancel">取消</button>
+                    <button type="submit">送出</button>
+                </div>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- 表單結束 -->
+]]></content>
+	<tabTrigger>tableform</tabTrigger>
+	<description>tbf - TableForm HTML</description>
+	<scope>text.html, source.php, source.asp</scope>
+</snippet>

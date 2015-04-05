@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<input type="radio" name="$1" id="$2">
+<label for="$2"><span></span>${3:radio}</label>
+]]></content>
+	<tabTrigger>radiotbf</tabTrigger>
+	<description>tbf-radio TableForm input</description>
+	<scope>text.html, source.php, source.asp</scope>
+</snippet>

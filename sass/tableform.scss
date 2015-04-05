@@ -1,0 +1,180 @@
+/**
+ * Name: TableForm - NATIVE FORM UI
+ * Description: table form為根本，來建立表格樣式
+ * Version: 1.0.0
+ * Last update: 2015/03/15
+ * Author: Crack快克 <crackccc@gmail.com>
+ *
+ * Summary:
+ *
+ *    0. Variable
+ *      - 0.1. $tbf_theme
+ *      - 0.2. $tbf_prefix 預設為無前綴
+ *      
+ *    1. Style
+ *      
+ */
+
+@import "compass";
+   
+// -------------------------------------
+//   0. Table Form (tbf) Variable
+// -------------------------------------
+
+$tbf_prefix         :    '.tbf-';              // class prefix- ; .tbf-table
+$tbf_theme          :    saturate(#4fa1db, 30%);    // 主色
+
+$tbf_cap_txt        :    $tbf_theme;                // 表格標題文字顏色
+$tbf_cap_border     :    $tbf_theme;                // 表格標題下邊線顏色
+
+$tbf_txt            :    #ccc;                      // 表格文字顏色
+$tbf_th_txt         :    darken($tbf_txt, 40%);     // 表頭文字顏色
+$tbf_type_txt       :    lighten($tbf_theme, 10%);  // 表格輸入框、選擇框文字顏色
+$tbf_type_border    :    $tbf_theme;                // iniput, select, textarea  border color
+
+$tbf_radio_border   :    $tbf_theme;                // 單選框邊框顏色
+$tbf_radio_fill     :    $tbf_theme;                // 單選框填滿顏色
+
+$tbf_placeholder_txt:    lighten(#bfbfbf, 5%);      // 佔位符文字顏色
+
+$tbf_btn_txt        :    #fff;                      // 按鈕文字顏色
+$tbf_btn_bgA        :    $tbf_theme;                // 送出按鈕顏色
+$tbf_btn_bgB        :    #ddd;                      // 取消按鈕顏色
+
+
+
+// -------------------------------------
+//   1. Style
+// -------------------------------------
+
+#{$tbf_prefix}table{
+  
+  margin: 0 auto;
+  padding: 35px 30px 25px;
+  display: block;
+  color: $tbf_txt;
+  font-size: 12px;
+  border: 3px solid $tbf_theme;
+  @include border-radius(10px);
+
+  // 表頭設定
+  caption {
+    color: $tbf_cap_txt;
+    border-bottom: 2px solid $tbf_cap_border;
+    margin: 5px 0 3px;
+    padding-bottom: 10px;
+    position: relative;
+    top: -15px;
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  th, td{
+      padding: 5px 8px;
+  }
+  th{
+    color: $tbf_th_txt;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  // ----- Form ----- //
+
+  input, select, textarea{
+    padding: 8px;
+    color: $tbf_type_txt;
+    border: 2px solid $tbf_type_border;
+    @include border-radius(5px);
+    outline: none;
+    background-color: transparent;
+    @include transition(box-shadow .5s);
+    &:focus{
+      @include box-shadow(0 0 5px $tbf_type_border);
+    }
+  }
+
+  // placeholder
+  input[type="text"] {
+    width: 100%;
+    @include input-placeholder {
+      color: $tbf_placeholder_txt;
+      font-style: italic;
+      opacity: 1;
+      @include transition(opacity .5s);
+    }
+    &:focus{
+      @include input-placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  // textarea
+  textarea{
+    width: 100%;
+    min-height: 10em;
+  }
+
+   // radio
+  input[type="radio"]{ display: none; }
+  input[type="radio"] + label span{
+    width:10px;
+    height:10px;
+    margin:-1px 4px 0 0;
+    cursor:pointer;
+    border: 2px solid $tbf_radio_border;
+    @include inline-block(middle);
+    @include border-radius(10px);
+  }
+
+  input[type="radio"]:checked + label span {
+    position: relative;
+    &:after{
+      content: " ";
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $tbf_radio_fill;
+      @include border-radius(5px);
+      @include box-shadow(0 0 5px $tbf_radio_border);
+    }
+  }
+  
+  // button
+  button{
+    padding: 8px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    color: $tbf_btn_txt;
+    outline: none;
+    @include border-radius(5px);
+    @include transition(background .5s);
+    
+    &:active{
+      position: relative;
+      top: 1px;
+    }
+  }
+  button[type*="submit"]{
+    border: 2px solid lighten($tbf_btn_bgA, 5%);
+    background-color: $tbf_btn_bgA;
+    &:hover{
+      background-color: darken($tbf_btn_bgA, 10%);
+    }
+  }
+  button[type*="cancel"]{
+    border: 2px solid lighten($tbf_btn_bgB, 5%);
+    background-color: $tbf_btn_bgB;
+    &:hover{
+      background-color: darken($tbf_btn_bgB, 10%);
+    }
+  }
+}
+

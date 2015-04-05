@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/**
+ * Name: TableForm - NATIVE FORM UI
+ * Description: table form為根本，來建立表格樣式
+ * Version: 1.0.0
+ * Last update: 2015/03/15
+ * Author: Crack快克 <crackccc@gmail.com>
+ *
+ * Summary:
+ *
+ *    0. Variable
+ *      - 0.1. $tbf_theme
+ *      - 0.2. $tbf_prefix 預設為無前綴
+ *      
+ *    1. Style
+ *      
+ */
+.tbf-table {
+  margin: 0 auto;
+  padding: 35px 30px 25px;
+  display: block;
+  box-sizing: content-box;
+  color: #ccc;
+  font-size: 12px;
+  border: 3px solid #2fa6fb;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.tbf-table caption {
+  color: #2fa6fb;
+  border-bottom: 2px solid #2fa6fb;
+  margin: 5px 0 3px;
+  padding-bottom: 10px;
+  position: relative;
+  top: -15px;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+}
+.tbf-table th, .tbf-table td {
+  padding: 5px 8px;
+}
+.tbf-table th {
+  color: #666666;
+  font-size: 15px;
+  font-weight: bold;
+}
+.tbf-table input, .tbf-table select, .tbf-table textarea {
+  padding: 8px;
+  color: #61bcfc;
+  border: 2px solid #2fa6fb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+  -moz-transition: box-shadow 0.5s;
+  -o-transition: box-shadow 0.5s;
+  -webkit-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+}
+.tbf-table input:focus, .tbf-table select:focus, .tbf-table textarea:focus {
+  -moz-box-shadow: 0 0 5px #2fa6fb;
+  -webkit-box-shadow: 0 0 5px #2fa6fb;
+  box-shadow: 0 0 5px #2fa6fb;
+}
+.tbf-table input[type="text"] {
+  width: 100%;
+}
+.tbf-table input[type="text"]:-moz-placeholder {
+  color: #cccccc;
+  font-style: italic;
+  opacity: 1;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.tbf-table input[type="text"]::-moz-placeholder {
+  color: #cccccc;
+  font-style: italic;
+  opacity: 1;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.tbf-table input[type="text"]:-ms-input-placeholder {
+  color: #cccccc;
+  font-style: italic;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.tbf-table input[type="text"]::-webkit-input-placeholder {
+  color: #cccccc;
+  font-style: italic;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.tbf-table input[type="text"]:focus:-moz-placeholder {
+  opacity: 0;
+}
+.tbf-table input[type="text"]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.tbf-table input[type="text"]:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.tbf-table input[type="text"]:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.tbf-table textarea {
+  width: 100%;
+  min-height: 10em;
+}
+.tbf-table input[type="radio"] {
+  display: none;
+}
+.tbf-table input[type="radio"] + label span {
+  width: 10px;
+  height: 10px;
+  margin: -1px 4px 0 0;
+  cursor: pointer;
+  border: 2px solid #2fa6fb;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.tbf-table input[type="radio"]:checked + label span {
+  position: relative;
+}
+.tbf-table input[type="radio"]:checked + label span:after {
+  content: " ";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #2fa6fb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 5px #2fa6fb;
+  -webkit-box-shadow: 0 0 5px #2fa6fb;
+  box-shadow: 0 0 5px #2fa6fb;
+}
+.tbf-table button {
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+.tbf-table button:active {
+  position: relative;
+  top: 1px;
+}
+.tbf-table button[type*="submit"] {
+  border: 2px solid #48b1fb;
+  background-color: #2fa6fb;
+}
+.tbf-table button[type*="submit"]:hover {
+  background-color: #0590f2;
+}
+.tbf-table button[type*="cancel"] {
+  border: 2px solid #eaeaea;
+  background-color: #ddd;
+}
+.tbf-table button[type*="cancel"]:hover {
+  background-color: #c4c4c4;
+}
+
+/*# sourceMappingURL=tableform.css.map */
