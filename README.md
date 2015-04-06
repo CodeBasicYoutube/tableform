@@ -74,7 +74,7 @@ Welcome to TableForm
 
 #### <i class="icon-pencil"></i> DEMO
 
-[<i class="icon-download"></i> TableForm Download][0]
+[<i class="icon-download"></i> TableForm Demo][3]
 
 
 ----------
@@ -88,3 +88,4 @@ Welcome to TableForm
   [0]: https://github.com/Crackccc/tableform/archive/master.zip "TableForm"
   [1]: http://sass-lang.com/ "Sass"
   [2]: http://compass-style.org/ "Compass"
+  [3]: http://www.31webdesign.com/lab_tableform/ "TableForm Demo"
